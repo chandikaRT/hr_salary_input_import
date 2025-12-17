@@ -1,0 +1,34 @@
+<odoo>
+    <record id="view_hr_salary_input_wizard_form" model="ir.ui.view">
+        <field name="name">hr.salary.input.wizard.form</field>
+        <field name="model">hr.salary.input.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Upload Salary Inputs">
+                <sheet>
+                    <group>
+                        <field name="excel_file" filename="file_name"/>
+                        <field name="file_name"/>
+                    </group>
+                    <footer>
+                        <button string="Preview" type="object" name="action_preview" class="btn-primary"/>
+                        <button string="Import" type="object" name="action_import" class="btn-success"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hr_salary_input_import_tree" model="ir.ui.view">
+        <field name="name">hr.salary.input.import.tree</field>
+        <field name="model">hr.salary.input.import</field>
+        <field name="arch" type="xml">
+            <tree string="Preview Salary Inputs">
+                <field name="employee_id"/>
+                <field name="input_name"/>
+                <field name="amount"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
