@@ -1,5 +1,5 @@
 <odoo>
-    <menuitem id="menu_hr_salary_input_root" name="Salary Inputs Import" parent="hr_payroll.menu_hr_payroll_root"/>
+    <menuitem id="menu_hr_salary_input_root" name="Salary Inputs Import" parent="hr_work_entry_contract_enterprise.menu_hr_payroll_root"/>
 
     <record id="action_hr_salary_input_wizard" model="ir.actions.act_window">
         <field name="name">Import Salary Inputs</field>
