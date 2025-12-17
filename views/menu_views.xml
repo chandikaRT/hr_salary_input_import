@@ -1,14 +1,19 @@
 <odoo>
-    <menuitem id="menu_hr_salary_input_root" name="Salary Inputs Import" parent="hr_work_entry_contract_enterprise.menu_hr_payroll_root"/>
+    <!-- Parent menu under Payroll -->
+    <menuitem id="menu_hr_salary_input_root"
+              name="Salary Inputs Import"
+              parent="hr_work_entry_contract_enterprise.menu_hr_payroll_root"/>
 
+    <!-- Submenu that opens the wizard -->
     <record id="action_hr_salary_input_wizard" model="ir.actions.act_window">
-        <field name="name">Import Salary Inputs</field>
+        <field name="name">Upload Excel</field>
         <field name="res_model">hr.salary.input.wizard</field>
         <field name="view_mode">form</field>
         <field name="target">new</field>
     </record>
 
-    <menuitem id="menu_hr_salary_input_wizard" name="Upload Excel"
+    <menuitem id="menu_hr_salary_input_wizard"
+              name="Upload Excel"
               parent="menu_hr_salary_input_root"
               action="action_hr_salary_input_wizard"/>
 </odoo>
